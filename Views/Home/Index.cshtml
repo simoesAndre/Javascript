@@ -1,0 +1,184 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Iniciativa Vida Saudável";
+}
+
+<div class="row">
+    <div class="col-5">
+        <h4 class="espaco1">Iniciativa Saúde da Cidade</h4>
+        <p class="espaco2">Texto sobre vida saudável: Lorem ipsum dolor</p>
+        <p class="espaco2">sit amet et delectus accommodare his consul</p>
+        <p class="espaco2">copiosae legendos at vix ad putent delectus</p>
+        <p class="espaco2">delicata usu. Vidit dissentiet eos cu eum an</p>
+        <p class="espaco1">brute copiosae hendrerit.</p>
+        <p class="espaco2">Texto sobre a iniciativa: Eos erant dolorum an.</p>
+        <p class="espaco2">Per facer affert ut. Mei iisque mentitum</p>
+        <p class="espaco2">moderatius cu. Sit munere facilis accusam eu</p>
+        <p>dicat falli consulatu at vis.</p>
+    </div>
+    <div class="col-7">
+        <figure>
+            <a href="#">
+                <img src="/imagens/banner.png" alt="Banner" class="imagem2">
+            </a>
+        </figure>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <div class="row">
+            <div class="col-8 position-relative contorno">
+                <h5>Entre em contato!</h5>
+                <p class="subtitulo3 espaco2">Nos mande uma mensagem e fique por dentro de</p>
+                <p class="subtitulo3">nossos eventos</p>
+                <form action="/Home/Cadastrar" method="POST" id="frmCadastro">
+                    <div>
+                        <label asp-for="Nome">Nome:</label>
+                        <input asp-for="Nome" class="position-relative inputNome" id="nome"/>
+                    </div>
+                    <div>
+                        <label asp-for="Email">Email:</label>
+                        <input asp-for="Email" class="position-relative inputEmail" id="email"/>
+                    </div>
+                    <div>
+                        <label asp-for="Mensagem" class="position-relative posicao1">
+                            <p class="espaco2">Mensagem</p>
+                            <p>(opcional):</p>
+                        </label>
+                        <textarea asp-for="Mensagem" class="inputMensagem" id="mensagem"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar" class="position-relative inputEnviar"/>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <div class="col-7 position-relative espaco6">
+        <div class="row">
+            <div class="col-4">
+                <figure>
+                    <a href="#" id="link1">
+                        <img src="/imagens/agenda.png" alt="Agenda" class="position-relative imagem3">
+                    </a>
+                </figure>
+                <a href="#" id="link2">
+                    <p class="position-relative link1 espaco2">Agenda de</p>
+                    <p class="position-relative link1-1">eventos</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <figure>
+                    <a href="#" id="link3">
+                        <img src="/imagens/dicas.png" alt="Dicas" class="imagem4">
+                    </a>
+                </figure>
+                <a href="#" id="link4">
+                    <p class="position-relative link2 espaco2">Dicas de vida</p>
+                    <p class="position-relative link2-1 espaco2">saudável</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <figure>
+                    <a href="#" id="link5">
+                        <img src="/imagens/apoiadores.png" alt="Apoiadores" class="position-relative imagem5">
+                    </a>
+                </figure>
+                <a href="#" id="link6" class="position-relative link3">Apoiadores</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-agenda" class="modal-container">
+    <div class="modal1">
+        <p class="text-center subtitulo2">Agenda</p>
+        <p class="espaco1">03/03/2021 09:30 - Evento 1</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his</p>
+        <p>consul copiosae</p>
+        <p class="espaco1">08/03/2021 07:30 - Evento 2</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his</p>
+        <p>consul copiosae</p>
+        <p class="espaco1">09/03/2021 14:00 - Evento 3</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his</p>
+        <p>consul copiosae</p>
+    </div>
+</div>
+
+<div id="modal-dicas" class="modal-container">
+    <div class="modal1">
+        <p class="text-center subtitulo1">Dicas de vida</p>
+        <p class="text-center subtitulo2">saudável</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his consul</p>
+        <p class="espaco2">copiosae legendos at vix ad putent</p>
+        <p class="espaco2">delectus delicata usu. Vidit dissentiet</p>
+        <p>eos</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his consul</p>
+        <p class="espaco2">copiosae legendos at vix ad putent</p>
+        <p class="espaco2">delectus delicata usu. Vidit dissentiet</p>
+        <p>eos</p>
+        <p class="espaco2">Lorem ipsum dolor sit amet et</p>
+        <p class="espaco2">delectus accommodare his consul</p>
+        <p class="espaco2">copiosae legendos at vix ad putent</p>
+        <p class="espaco2">delectus delicata usu. Vidit dissentiet</p>
+        <p>eos</p>
+    </div>
+</div>
+
+<div id="modal-apoiadores" class="modal-container">
+    <div class="modal1">
+        <p class="subtitulo2 text-center">Apoiadores</p>
+        <div class="row">
+            <div class="col-3 espaco4">
+                <figure>
+                    <img src="/imagens/empresa1.png" alt="Empresa 1" class="imagem1">
+                </figure>
+            </div>
+            <div class="col-9 espaco5">
+                <p class="descricao1 espaco2">Empresa 1</p>
+                <p class="descricao2">descrição</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 espaco4">
+                <figure>
+                    <img src="/imagens/empresa2.png" alt="Empresa 2" class="imagem1">
+                </figure>
+            </div>
+            <div class="col-9 espaco5">
+                <p class="descricao1 espaco2">Empresa 2</p>
+                <p class="descricao2">descrição</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 espaco4">
+                <figure>
+                    <img src="/imagens/empresa3.png" alt="Empresa 3" class="imagem1">
+                </figure>
+            </div>
+            <div class="col-9 espaco5">
+                <p class="descricao1 espaco2">Empresa 3</p>
+                <p class="descricao2">descrição</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 espaco4">
+                <figure>
+                    <img src="/imagens/empresa4.png" alt="Empresa 4" class="imagem1">
+                </figure>
+            </div>
+            <div class="col-9 espaco5">
+                <p class="descricao1 espaco2">Empresa 4</p>
+                <p class="descricao2">descrição</p>
+            </div>
+        </div>
+    </div>
+</div>
+
